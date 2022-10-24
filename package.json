@@ -1,0 +1,43 @@
+{
+  "name": "sipgate-bridge-inwendo-erp",
+  "private": true,
+  "description": "sipgate Bridge for the inwendo ERP",
+  "main": "dist/index.js",
+  "repository": "git@github.com:inwendo/sipgate-bridge-inwendo-erp.git",
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "build": "tsc",
+    "start": "ts-node-dev src/index.ts",
+    "lint": "eslint 'src/**/*.ts' --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@sipgate/integration-bridge": "^0.6.0",
+    "express": "^4.18.1",
+    "husky": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/parser": "^5.36.0",
+    "eslint": "^8.23.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,js,yml,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
