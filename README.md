@@ -1,4 +1,4 @@
-# CLINQ Bridge inwendo ERP
+# sipgate / CLINQ Bridge inwendo ERP
 
 ## Step by step guide
 
